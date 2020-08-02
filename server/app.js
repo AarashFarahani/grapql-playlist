@@ -5,8 +5,12 @@ const {
 const schema = require("./schema/schema");
 const dotenv = require("dotenv");
 const mongoose = require('mongoose');
+const cors = require('cors');
 
 const app = express();
+
+// allow cross-origin requests
+app.use(cors());
 
 dotenv.config();
 
